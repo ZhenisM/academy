@@ -98,7 +98,6 @@ section h2 {
   padding: 10px 30px;
   color: white;
   text-decoration: none;
-  font-weight: bold;
 }
 
 .navbar a:hover {
@@ -106,9 +105,16 @@ section h2 {
   color: transparent;
   background-clip: text;
   -webkit-background-clip: text;
-  font-weight: bold;
 }
 
+.navbar a span {
+  display: block;
+  font-size: 22px;
+}
+.navbar a span:first-child {
+  border-bottom: solid 1px;
+  font-size: 16px;
+}
 .navbar-inner {
   display: none;
 }
