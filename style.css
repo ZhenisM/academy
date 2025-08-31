@@ -10,6 +10,7 @@
   font-style: normal;
 }
 
+
 body {
   margin: 0;
   font-family: 'Papyrus', sans-serif;
@@ -20,6 +21,15 @@ body {
               #103324 15%,
               #103324 85%,
               #014b2a 100%);
+}
+
+.golden-text, h2 {
+  background: linear-gradient(45deg, #ffd700, #e5c100, #b59f00);
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  font-weight: bold;
+  font-size: 3rem;
 }
 
 .banner {
@@ -71,6 +81,14 @@ body {
   padding: 10px 30px;
   color: white;
   text-decoration: none;
+  font-weight: bold;
+}
+
+.navbar a:hover {
+  background: linear-gradient(45deg, #ffd700, #e5c100, #b59f00);
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
   font-weight: bold;
 }
 
