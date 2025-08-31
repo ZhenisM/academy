@@ -23,7 +23,22 @@ body {
               #014b2a 100%);
 }
 
-.golden-text, h2 {
+section {
+  padding: 20px;
+  border-bottom: 1px solid #ccc;
+}
+
+section h2 {
+  background: linear-gradient(45deg, #ffd700, #e5c100, #b59f00);
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  font-weight: bold;
+  font-size: 3rem;
+  text-align: center;
+}
+
+.golden-text {
   background: linear-gradient(45deg, #ffd700, #e5c100, #b59f00);
   color: transparent;
   background-clip: text;
@@ -33,7 +48,7 @@ body {
 }
 
 .banner {
-  background: url('images/banner.jpg') center/cover no-repeat;
+  background: url('images/banner_2.jpg') center/cover no-repeat;
   height: 70vh;
   display: flex;
   align-items: center;
@@ -52,7 +67,7 @@ body {
 }
 
 .navbar {
-  background: #333;
+  background: var(--green);
   color: white;
   position: relative;
   width: 100%;
@@ -68,9 +83,11 @@ body {
 
 .navbar ul {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   list-style: none;
   margin: 0;
+  width: 100%;
+  padding: 0;
 }
 
 .navbar li {
@@ -120,18 +137,14 @@ body {
 .container {
   width: 70%;
   margin: 0 auto;
-  background-color: #ffffff50;
+  background-color: #e8e8e8;
 }
 
-section {
-  padding: 100px 20px;
-  border-bottom: 1px solid #ccc;
-}
 
 /* Стили для мобильных устройств */
 @media (max-width: 768px) {
   .navbar {
-    position: fixed; /* Фиксируем меню на мобильных */
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
@@ -139,11 +152,11 @@ section {
   }
 
   .navbar ul {
-    display: none; /* Скрыть меню по умолчанию */
+    display: none;
     flex-direction: column;
     width: 100%;
     text-align: center;
-    background-color: #333;
+    background-color: var(--green);
     position: absolute;
     top: 100%;
     left: 0;
@@ -151,7 +164,7 @@ section {
   }
 
   .navbar ul.active {
-    display: flex; /* Показать меню при активации */
+    display: flex;
   }
 
   .navbar a {
@@ -166,6 +179,69 @@ section {
   }
 
   .hamburger {
-    display: flex; /* Показать гамбургер на мобильных устройствах */
+    display: flex;
+  }
+  .container {
+    width: 100%;
+  }
+}
+
+/*---------------------------------------------*/
+
+.about-block {
+
+}
+.about-content {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  gap: 10px;
+}
+.about-img {
+  width: 100%;
+}
+.about-img img {
+  width: 100%;
+}
+.about-info {
+  
+}
+.about-info-description {
+  
+}
+
+@media (max-width: 576px) {
+  .about-content {
+    grid-template-columns: 1fr;
+  }
+}
+/*---------------------------------------------*/
+.audience-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+.audience-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--green);
+  color: var(--gold);
+  padding: 20px;
+  border-radius: 4px;
+}
+.audience-info-title {
+  font-weight: 600;
+  font-size: 24px;
+}
+.audience-info-list {
+  
+}
+.audience-info-list li {
+  
+}
+@media (max-width: 768px) {
+  .audience-content {
+    grid-template-columns: 1fr;
   }
 }
