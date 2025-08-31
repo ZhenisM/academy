@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Лендинг Курс</title>
     <link rel="stylesheet" href="style.css" />
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
 
@@ -15,8 +17,20 @@
             <img src="images/logo.png" alt="Логотип" />
         </div>
     </div>
+
     <nav class="navbar" id="navbar">
-        <ul>
+        <div class="navbar-inner">
+            <div class="logo-img">
+                <img src="">
+            </div>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+
+        <ul id="nav-list">
             <li><a href="#home">Главная</a></li>
             <li><a href="#about">О нас</a></li>
             <li><a href="#audience">Для кого курс</a></li>
@@ -27,24 +41,33 @@
     </nav>
 </div>
 
-<section id="about" class="container"><h2>О нас</h2></section>
-<section id="audience" class="container"><h2>Для кого курс</h2></section>
-<section id="programs" class="container"><h2>Программы</h2></section>
-<section id="reviews" class="container"><h2>Отзывы</h2></section>
-<section id="contacts" class="container"><h2>Контакты</h2></section>
+<div class="container">
+    <section id="about" class="about"><h2>О нас</h2></section>
+    <section id="audience" class="audience"><h2>Для кого курс</h2></section>
+    <section id="programs" class="programs"><h2>Программы</h2></section>
+    <section id="reviews" class="reviews"><h2>Отзывы</h2></section>
+    <section id="contacts" class="contacts"><h2>Контакты</h2></section>
+</div>
 
 <script>
-  // Фиксация меню при скролле
-  const navbar = document.getElementById("navbar");
-  const bannerHeight = document.querySelector(".banner").offsetHeight;
+    // Фиксация меню при скролле
+    const navbar = document.getElementById("navbar");
+    const bannerHeight = document.querySelector(".banner").offsetHeight;
 
-  window.addEventListener("scroll", () => {
-    if (window.scrollY >= bannerHeight) {
-      navbar.classList.add("fixed");
-    } else {
-      navbar.classList.remove("fixed");
-    }
-  });
+    window.addEventListener("scroll", () => {
+        if (window.scrollY >= bannerHeight) {
+            navbar.classList.add("fixed");
+        } else {
+            navbar.classList.remove("fixed");
+        }
+    });
+
+    // Открытие/закрытие гамбургера
+    $(document).ready(function() {
+        $('#hamburger').click(function() {
+            $('#nav-list').stop(true, true).slideToggle(300); 
+        });
+    });
 </script>
 
 </body>

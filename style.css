@@ -1,12 +1,23 @@
+:root {
+  --green: #014b2a;
+  --gold: #e8c439;
+}
+
 body {
   margin: 0;
   font-family: Arial, sans-serif;
   scroll-behavior: smooth;
+  background-color: var(--green);
+  background: linear-gradient(to right, 
+              #014b2a 0%, 
+              #103324 15%,
+              #103324 85%,
+              #014b2a 100%);
 }
 
 .banner {
   background: url('images/banner.jpg') center/cover no-repeat;
-  height: 100vh;
+  height: 70vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -28,6 +39,7 @@ body {
   color: white;
   position: relative;
   width: 100%;
+  z-index: 100;
 }
 
 .navbar.fixed {
@@ -42,20 +54,93 @@ body {
   justify-content: center;
   list-style: none;
   margin: 0;
-  padding: 1rem;
 }
 
 .navbar li {
-  margin: 0 1rem;
 }
 
 .navbar a {
+  display: block;
+  padding: 10px 30px;
   color: white;
   text-decoration: none;
   font-weight: bold;
 }
 
+.navbar-inner {
+  display: none;
+}
+.logo-img {
+  width: 150px;
+}
+.logo-img img {
+  width: 100%;
+}
+.hamburger {
+  display: none; /* Скрыть на десктопах */
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 25px;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.hamburger span {
+  background-color: white;
+  height: 4px;
+  width: 100%;
+}
+
+.container {
+  width: 70%;
+  margin: 0 auto;
+  background-color: #ffffff50;
+}
+
 section {
   padding: 100px 20px;
   border-bottom: 1px solid #ccc;
+}
+
+/* Стили для мобильных устройств */
+@media (max-width: 768px) {
+  .navbar {
+    position: fixed; /* Фиксируем меню на мобильных */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+  }
+
+  .navbar ul {
+    display: none; /* Скрыть меню по умолчанию */
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    background-color: #333;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    padding: 0;
+  }
+
+  .navbar ul.active {
+    display: flex; /* Показать меню при активации */
+  }
+
+  .navbar a {
+    padding: 15px 20px;
+    font-size: 18px;
+  }
+
+  .navbar-inner {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .hamburger {
+    display: flex; /* Показать гамбургер на мобильных устройствах */
+  }
 }
