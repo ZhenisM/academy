@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Лендинг Курс</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<div class="header">
+    <div class="banner">
+        <div class="banner-content">
+            <h1>Добро пожаловать на курс!</h1>
+            <img src="images/logo.png" alt="Логотип" />
+        </div>
+    </div>
+    <nav class="navbar" id="navbar">
+        <ul>
+            <li><a href="#home">Главная</a></li>
+            <li><a href="#about">О нас</a></li>
+            <li><a href="#audience">Для кого курс</a></li>
+            <li><a href="#programs">Программы</a></li>
+            <li><a href="#reviews">Отзывы</a></li>
+            <li><a href="#contacts">Контакты</a></li>
+        </ul>
+    </nav>
+</div>
+
+<section id="about" class="container"><h2>О нас</h2></section>
+<section id="audience" class="container"><h2>Для кого курс</h2></section>
+<section id="programs" class="container"><h2>Программы</h2></section>
+<section id="reviews" class="container"><h2>Отзывы</h2></section>
+<section id="contacts" class="container"><h2>Контакты</h2></section>
+
+<script>
+  // Фиксация меню при скролле
+  const navbar = document.getElementById("navbar");
+  const bannerHeight = document.querySelector(".banner").offsetHeight;
+
+  window.addEventListener("scroll", () => {
+    if (window.scrollY >= bannerHeight) {
+      navbar.classList.add("fixed");
+    } else {
+      navbar.classList.remove("fixed");
+    }
+  });
+</script>
+
+</body>
+</html>
