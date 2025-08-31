@@ -3,9 +3,16 @@
   --gold: #e8c439;
 }
 
+@font-face {
+  font-family: 'Papyrus';
+  src: url('fonts/Papyrus/Papyrus-02.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
+  font-family: 'Papyrus', sans-serif;
   scroll-behavior: smooth;
   background-color: var(--green);
   background: linear-gradient(to right, 
