@@ -44,6 +44,7 @@ section h2 {
   font-weight: bold;
   font-size: 3rem;
   text-align: center;
+  margin: 40px 0;
 }
 
 .golden-text {
@@ -52,27 +53,90 @@ section h2 {
   background-clip: text;
   -webkit-background-clip: text;
   font-weight: bold;
-  font-size: 3rem;
 }
 
 .banner {
   background: url('images/banner_2.jpg') center/cover no-repeat;
   height: 70vh;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
 }
 
-.banner-content {
+.banner-logo {
   text-align: center;
-  background: rgba(255, 255, 255, 0.8);
-  padding: 2rem;
-  border-radius: 10px;
 }
 
-.banner-content h1 {
+.banner-logo h1 {
+  background: linear-gradient(45deg, #ffd700, #e5c100, #b59f00);
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
   margin-bottom: 1rem;
+  font-size: 3rem;
 }
+.banner-content {
+
+}
+.banner-content h2 {
+  background: linear-gradient(45deg, #ffd700, #e5c100, #b59f00);
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  margin: 10px;
+  font-size: 2rem;
+}
+.subtitle {
+  background: linear-gradient(45deg, #ffd700, #e5c100, #b59f00);
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+.header-btns {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+a.header-btns-item  {
+  background-color: var(--green);
+  color: #fff;
+  padding: 10px 30px;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: all 0.8s;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+a.header-btns-item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--gold);
+  clip-path: circle(0 at center);
+  transition: clip-path 0.8s;
+  z-index: -1;
+}
+
+a.header-btns-item:hover::before {
+  clip-path: circle(100% at center);
+  color: #000;
+}
+
+
+
+
+/*-------------------------------------------*/
 
 .navbar {
   background: var(--green);
@@ -106,14 +170,40 @@ section h2 {
   padding: 10px 30px;
   color: white;
   text-decoration: none;
+  position: relative;
+  overflow: hidden;
 }
 
-.navbar a:hover {
-  background: linear-gradient(45deg, #ffd700, #e5c100, #b59f00);
-  color: transparent;
-  background-clip: text;
-  -webkit-background-clip: text;
+.navbar a::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background: rgb(226 191 1);
+  border-radius: 100%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  z-index: 1;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
 }
+
+.navbar a:hover::before {
+  width: 200px;
+  height: 200px;
+  animation: ripple78 1s ease-out infinite;
+  opacity: 1;
+  color: var(--gold);
+}
+
+@keyframes ripple78 {
+  0% { width: 0; height: 0; opacity: 1; }
+  100% { width: 200px; height: 200px; opacity: 0; }
+}
+
+
 
 .navbar a span {
   display: block;
@@ -133,11 +223,12 @@ section h2 {
   width: 100%;
 }
 .hamburger {
-  display: none; /* Скрыть на десктопах */
+  display: none;
   flex-direction: column;
   justify-content: space-between;
+  gap: 7px;
   width: 30px;
-  height: 25px;
+  height: 20px;
   cursor: pointer;
   padding: 10px;
 }
@@ -149,9 +240,6 @@ section h2 {
 }
 
 
-
-
-/* Стили для мобильных устройств */
 @media (max-width: 768px) {
   .navbar {
     position: fixed;
@@ -194,6 +282,25 @@ section h2 {
   .container {
     width: 100%;
   }
+  .banner-logo h1 {
+    margin-top: 4rem;
+    font-size: 2rem;
+  }
+  .banner-content {
+    padding: 10px;
+    background-color: #00000090;
+  }
+  .banner-content h2 {
+    font-size: 24px;
+    margin: 10px 0;
+  }
+  .subtitle {
+    font-size: 18px;
+  }
+  section h2 {
+    font-size: 32px;
+    margin: 20px 0;
+  }
 }
 
 /*---------------------------------------------*/
@@ -205,6 +312,10 @@ section h2 {
   display: grid;
   grid-template-columns: 1fr 3fr;
   gap: 10px;
+  background-color: var(--green);
+  padding: 20px;
+  border-radius: 4px;
+  color: #fff;
 }
 .about-img {
   width: 100%;
@@ -235,6 +346,7 @@ section h2 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: 10px;
   background-color: var(--green);
   color: var(--gold);
   padding: 20px;
@@ -244,14 +356,35 @@ section h2 {
   font-weight: 600;
   font-size: 24px;
 }
+
+.audience-info-description {
+  font-size: 16px;
+}
+
 .audience-info-list {
-  
+  padding: 0;
+  list-style: none;
 }
 .audience-info-list li {
-  
+  font-size: 20px;
 }
 @media (max-width: 768px) {
   .audience-content {
     grid-template-columns: 1fr;
   }
 }
+
+
+/*---------------------------------------*/
+
+
+
+
+
+
+
+
+
+
+
+
