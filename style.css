@@ -16,10 +16,10 @@ body {
   font-family: 'Papyrus', sans-serif;
   scroll-behavior: smooth;
   /*background: linear-gradient(to right, 
-              #014b2a 0%, 
-              #103324 15%,
-              #103324 85%,
-              #014b2a 100%);*/
+              #266f4e 0%, 
+              #014b2a 15%,
+              #014b2a 85%,
+              #266f4e 100%);*/
   background-image: url(images/arabic_2.png);
   background-repeat: revert;
   background-size: 10%;
@@ -312,7 +312,11 @@ a.header-btns-item:hover::before {
   display: grid;
   grid-template-columns: 1fr 3fr;
   gap: 10px;
-  background-color: var(--green);
+  background: linear-gradient(to right, 
+              #266f4e 0%, 
+              #014b2a 25%,
+              #014b2a 75%,
+              #266f4e 100%);
   padding: 20px;
   border-radius: 4px;
   color: #fff;
@@ -344,7 +348,6 @@ a.header-btns-item:hover::before {
 .audience-info {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   gap: 10px;
   background-color: var(--green);
@@ -355,6 +358,7 @@ a.header-btns-item:hover::before {
 .audience-info-title {
   font-weight: 600;
   font-size: 24px;
+  text-align: center;
 }
 
 .audience-info-description {
@@ -377,14 +381,130 @@ a.header-btns-item:hover::before {
 
 /*---------------------------------------*/
 
+.programs-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+}
+.programs-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  background-color: var(--green);
+  color: var(--gold);
+  padding: 20px;
+  border-radius: 4px;
+}
+.programs-info-title {
+  font-weight: 600;
+  font-size: 24px;
+  text-align: center;
+}
+
+.programs-info-description {
+  font-size: 16px;
+}
+
+.programs-info-list {
+  padding: 0;
+  list-style: none;
+}
+.programs-info-list li {
+  font-size: 20px;
+}
+@media (max-width: 768px) {
+  .programs-content {
+    grid-template-columns: 1fr;
+  }
+}
 
 
+/*---------------------------------------*/
 
 
+.format-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+}
+.format-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  background-color: var(--green);
+  color: var(--gold);
+  padding: 20px;
+  border-radius: 4px;
+}
+.format-info-title {
+  font-weight: 600;
+  font-size: 24px;
+  text-align: center;
+}
+
+.format-info-description {
+  font-size: 16px;
+}
+
+.format-info-list {
+  padding: 0;
+  list-style: none;
+}
+.format-info-list li {
+  font-size: 20px;
+}
+@media (max-width: 768px) {
+  .format-content {
+    grid-template-columns: 1fr;
+  }
+}
 
 
+/*---------------------------------------*/
 
+.reviews-content {
 
+}
+.reviews-slider {
 
-
+}
+.reviews-slider-item {
+  padding: 10px;
+}
+.reviews-slider-item-inner {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  gap: 20px;
+  background-color: var(--green);
+  padding: 20px;
+  border-radius: 4px;
+}
+.reviews-slider-item-info {
+  
+}
+.reviews-slider-item-img {
+  background-color: var(--gold);
+  padding: 10px;
+  border-radius: 4px;
+}
+.reviews-slider-item-img img {
+  width: 100%;
+}
+.reviews-slider-item-name {
+  color: var(--gold);
+}
+.reviews-slider-item-text {
+  color: var(--gold);
+}
+.reviews-slider .slick-prev, .reviews-slider .slick-next {
+  z-index: 10;
+}
+.reviews-slider .slick-prev {
+    left: 0;
+}
+.reviews-slider .slick-next {
+    right: 0;
+}
 
