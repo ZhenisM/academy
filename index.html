@@ -73,24 +73,36 @@
             <h2>Для кого курс</h2>
             <div class="audience-content">
                 <div class="audience-info">
+                    <div class="audience-info-img">
+                        <img src="images/gold/gold_center_2.png">
+                    </div>
                     <div class="audience-info-title">👶 Дети от 5 лет</div>
                     <div class="audience-info-description">
                         Lorem Ipsum is simply dummy text of the printing and typesetting industry.
                     </div>
                 </div>
                 <div class="audience-info">
+                    <div class="audience-info-img">
+                        <img src="images/gold/gold_center_2.png">
+                    </div>
                     <div class="audience-info-title">👩 Женщины</div>
                     <div class="audience-info-description">
                         Lorem Ipsum is simply dummy text of the printing and typesetting industry.
                     </div>
                 </div>
                 <div class="audience-info">
+                    <div class="audience-info-img">
+                        <img src="images/gold/gold_center_2.png">
+                    </div>
                     <div class="audience-info-title">🕌 Начинающие в изучении Корана</div>
                     <div class="audience-info-description">
                         Lorem Ipsum is simply dummy text of the printing and typesetting industry.
                     </div>
                 </div>
                 <div class="audience-info">
+                    <div class="audience-info-img">
+                        <img src="images/gold/gold_center_2.png">
+                    </div>
                     <div class="audience-info-title">📖 Те, кто хочет улучшить таджвид</div>
                     <div class="audience-info-description">
                         Lorem Ipsum is simply dummy text of the printing and typesetting industry.
@@ -104,7 +116,7 @@
             <h2>Программы</h2>
             <div class="programs-content">
                 <div class="programs-info">
-                    <div class="programs-info-title">«Базовый» — арабский алфавит</div>
+                    <div class="programs-info-title">«Базовый» арабский алфавит</div>
                     <div class="programs-info-description">
                         Lorem Ipsum is simply dummy text of the printing and typesetting industry.
                     </div>
@@ -215,16 +227,29 @@
 
 
 <script>
-    // Фиксация меню при скролле
-    const navbar = document.getElementById("navbar");
-    const bannerHeight = document.querySelector(".banner").offsetHeight;
+    $(document).ready(function () {
+        const $navbar = $('#navbar');
+        const bannerHeight = $('.banner').outerHeight();
 
-    window.addEventListener("scroll", () => {
-        if (window.scrollY >= bannerHeight) {
-            navbar.classList.add("fixed");
-        } else {
-            navbar.classList.remove("fixed");
-        }
+        // Фиксация навбара при скролле
+        $(window).on('scroll', function () {
+          if ($(window).scrollTop() >= bannerHeight) {
+            $navbar.addClass('fixed');
+          } else {
+            $navbar.removeClass('fixed');
+          }
+        });
+
+        // Плавная прокрутка до якорей
+        $('#navbar a[href^="#"]').on('click', function (e) {
+          e.preventDefault();
+          const target = $(this.getAttribute('href'));
+          if (target.length) {
+            $('html, body').animate({
+              scrollTop: target.offset().top
+            }, 600); 
+          }
+        });
     });
 
     // Открытие/закрытие гамбургера
