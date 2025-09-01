@@ -15,17 +15,25 @@ body {
   margin: 0;
   font-family: 'Papyrus', sans-serif;
   scroll-behavior: smooth;
-  background-color: var(--green);
-  background: linear-gradient(to right, 
+  /*background: linear-gradient(to right, 
               #014b2a 0%, 
               #103324 15%,
               #103324 85%,
-              #014b2a 100%);
+              #014b2a 100%);*/
+  background-image: url(images/arabic_2.png);
+  background-repeat: revert;
+  background-size: 10%;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+  background-image: url(images/green_bg.png);
 }
 
 section {
   padding: 20px;
-  border-bottom: 1px solid #ccc;
+  background: linear-gradient(to right, #387b5599 0%, #014b2a99 25%, #014b2a99 75%, #387b5599 100%);
 }
 
 section h2 {
@@ -140,11 +148,7 @@ section h2 {
   width: 100%;
 }
 
-.container {
-  width: 80%;
-  margin: 0 auto;
-  background-color: #e8e8e8;
-}
+
 
 
 /* Стили для мобильных устройств */
