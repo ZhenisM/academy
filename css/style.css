@@ -5,7 +5,7 @@
 
 @font-face {
   font-family: 'Papyrus';
-  src: url('fonts/Papyrus/Papyrus-02.otf') format('opentype');
+  src: url('../fonts/Papyrus/Papyrus-02.otf') format('opentype');
   font-weight: normal;
   font-style: normal;
 }
@@ -20,7 +20,7 @@ body {
               #014b2a 15%,
               #014b2a 85%,
               #266f4e 100%);*/
-  background-image: url(images/arabic_2.png);
+  background-image: url(../images/arabic_2.png);
   background-repeat: revert;
   background-size: 10%;
 }
@@ -28,7 +28,7 @@ body {
 .container {
   width: 80%;
   margin: 0 auto;
-  background-image: url(images/green_bg.png);
+  background-image: url(../images/green_bg.png);
 }
 
 section {
@@ -56,7 +56,7 @@ section h2 {
 }
 
 .banner {
-  background: url('images/banner_2.jpg') center/cover no-repeat;
+  background: url('../images/banner_2.jpg') center/cover no-repeat;
   height: 70vh;
   display: flex;
   flex-direction: column;
@@ -329,7 +329,7 @@ a.header-btns-item:hover::before {
   position: absolute;
   width: 100px;
   height: 100px;
-  background-image: url('images/gold/gold_3.png');
+  background-image: url('../images/gold/gold_3.png');
   background-size: contain;
   background-repeat: no-repeat;
 }
@@ -444,7 +444,7 @@ a.header-btns-item:hover::before {
   position: absolute;
   width: 70px;
   height: 70px;
-  background-image: url('images/gold/gold_3.png');
+  background-image: url('../images/gold/gold_3.png');
   background-size: contain;
   background-repeat: no-repeat;
 }
@@ -510,7 +510,7 @@ a.header-btns-item:hover::before {
   position: absolute;
   width: 70px;
   height: 70px;
-  background-image: url('images/gold/gold_3.png');
+  background-image: url('../images/gold/gold_3.png');
   background-size: contain;
   background-repeat: no-repeat;
 }
@@ -576,4 +576,108 @@ a.header-btns-item:hover::before {
 .reviews-slider .slick-next {
     right: 0;
 }
+
+/*---------------------------------------*/
+
+
+.contacts-block {
+
+}
+.contacts-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  background: linear-gradient(to right, 
+              #266f4e 0%, 
+              #014b2a 25%,
+              #014b2a 75%,
+              #266f4e 100%);
+  padding: 20px;
+  border-radius: 4px;
+  color: #fff;
+  position: relative;
+}
+
+.contacts-content::before,
+.contacts-content::after {
+  content: '';
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background-image: url('../images/gold/gold_3.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.contacts-content::before {
+  top: 0;
+  left: 0;
+}
+.contacts-content::after {
+  bottom: 0;
+  right: 0;
+  transform: scale(-1, -1);
+}
+.contacts-img-wrap {
+  display: flex;
+  justify-content: center;
+}
+.contacts-img {
+  width: 300px;
+}
+.contacts-img img {
+  width: 100%;
+}
+.contacts-info {
+  
+}
+
+.contacts-info-item {
+  margin-bottom: 20px;
+}
+.contacts-info-item-link {
+  text-decoration: none;
+  font-size: 24px;
+  color: var(--gold);
+}
+.contacts-info-item-link i {
+  margin-right: 10px;
+}
+.contacts-social {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.contacts-social-item{
+    background-color: var(--gold);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+.social-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+@media (max-width: 576px) {
+  .contacts-content {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
