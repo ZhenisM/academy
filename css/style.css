@@ -1,5 +1,6 @@
 :root {
-  --green: #014b2a;
+  --green: #182D09;
+  --green-two: #395228;
   --gold: #e8c439;
 }
 
@@ -20,7 +21,7 @@ body {
               #014b2a 15%,
               #014b2a 85%,
               #266f4e 100%);*/
-  background-image: url(../images/arabic_2.png);
+  background-image: url(../images/arabic.jpg);
   background-repeat: revert;
   background-size: 10%;
 }
@@ -55,20 +56,38 @@ section h2 {
   -webkit-background-clip: text;
   font-weight: bold;
 }
-
+.header {
+  position: relative;
+}
 .banner {
-  background: url('../images/banner_2.jpg') center/cover no-repeat;
+  background: url('../images/banner.jpg') center/cover no-repeat;
   height: 70vh;
+}
+.banner-inner {
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.2);
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: relative;
 }
 
 .banner-logo {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 150px;
+}
+.banner-logo img {
+  width: 100%;
+}
+
+.banner-title {
   text-align: center;
 }
 
-.banner-logo h1 {
+.banner-title h1 {
   background: linear-gradient(45deg, #ffd700, #e5c100, #b59f00);
   color: transparent;
   background-clip: text;
@@ -80,18 +99,15 @@ section h2 {
 
 }
 .banner-content h2 {
-  background: linear-gradient(45deg, #ffd700, #e5c100, #b59f00);
-  color: transparent;
-  background-clip: text;
-  -webkit-background-clip: text;
+  color: #fff;
+  text-align: center;
   margin: 10px;
   font-size: 2rem;
 }
 .subtitle {
-  background: linear-gradient(45deg, #ffd700, #e5c100, #b59f00);
-  color: transparent;
-  background-clip: text;
-  -webkit-background-clip: text;
+  color: #fff;
+  text-align: center;
+  text-transform: uppercase;
   font-size: 24px;
   font-weight: 600;
   margin-bottom: 20px;
@@ -123,7 +139,7 @@ a.header-btns-item::before {
   left: 0;
   width: 100%;
   height: 100%;
-  background: var(--gold);
+  background: var(--green-two);
   clip-path: circle(0 at center);
   transition: clip-path 0.8s;
   z-index: -1;
@@ -145,12 +161,16 @@ a.header-btns-item:hover::before {
   position: relative;
   width: 100%;
   z-index: 100;
+  position: absolute;
+  bottom: 0;
+  left: 0;
 }
 
 .navbar.fixed {
   position: fixed;
   top: 0;
   left: 0;
+  bottom: auto;
   z-index: 1000;
 }
 
@@ -183,7 +203,7 @@ a.header-btns-item:hover::before {
   left: 0;
   width: 100%;
   height: 100%;
-  background: var(--gold);
+  background: var(--green-two);
   clip-path: circle(0 at center);
   transition: clip-path 0.8s;
   z-index: -1;
@@ -193,38 +213,6 @@ a.header-btns-item:hover::before {
   clip-path: circle(100% at center);
   color: #000;
 }
-
-/*
-.navbar a::before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 0;
-  height: 0;
-  background: rgb(226 191 1);
-  border-radius: 100%;
-  transform: translate(-50%, -50%);
-  pointer-events: none;
-  z-index: 1;
-  opacity: 0;
-  transition: opacity 0.3s ease-in-out;
-}
-
-.navbar a:hover::before {
-  width: 200px;
-  height: 200px;
-  animation: ripple78 1s ease-out infinite;
-  opacity: 1;
-  color: var(--gold);
-}
-
-@keyframes ripple78 {
-  0% { width: 0; height: 0; opacity: 1; }
-  100% { width: 200px; height: 200px; opacity: 0; }
-}
-
-*/
 
 .navbar a span {
   display: block;
@@ -242,11 +230,16 @@ a.header-btns-item:hover::before {
 .navbar-inner {
   display: none;
 }
-.logo-img {
-  width: 150px;
-}
-.logo-img img {
-  width: 100%;
+.logo-title {
+  background: linear-gradient(45deg, #ffd700, #e5c100, #b59f00);
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  font-size: 24px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
 }
 .hamburger {
   display: none;
@@ -267,10 +260,14 @@ a.header-btns-item:hover::before {
 
 
 @media (max-width: 768px) {
+  .banner-logo {
+    display: none;
+  }
   .navbar {
     position: fixed;
     top: 0;
     left: 0;
+    bottom: auto;
     width: 100%;
     z-index: 1000;
   }
@@ -308,7 +305,7 @@ a.header-btns-item:hover::before {
   .container {
     width: 100%;
   }
-  .banner-logo h1 {
+  .banner-title h1 {
     margin-top: 4rem;
     font-size: 2rem;
   }
@@ -339,10 +336,10 @@ a.header-btns-item:hover::before {
   grid-template-columns: 1fr 3fr;
   gap: 10px;
   background: linear-gradient(to right, 
-              #266f4e 0%, 
-              #014b2a 25%,
-              #014b2a 75%,
-              #266f4e 100%);
+              #395228 0%, 
+              #182D09 25%,
+              #182D09 75%,
+              #395228 100%);
   padding: 20px;
   border-radius: 4px;
   color: #fff;
@@ -612,12 +609,12 @@ a.header-btns-item:hover::before {
 .contacts-content {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 10px;
+  gap: 20px;
   background: linear-gradient(to right, 
-              #266f4e 0%, 
-              #014b2a 25%,
-              #014b2a 75%,
-              #266f4e 100%);
+              #395228 0%, 
+              #182D09 25%,
+              #182D09 75%,
+              #395228 100%);
   padding: 20px;
   border-radius: 4px;
   color: #fff;
@@ -648,7 +645,10 @@ a.header-btns-item:hover::before {
   justify-content: center;
 }
 .contacts-img {
-  width: 300px;
+  max-width: 300px;
+  background-color: var(--gold);
+  padding: 10px;
+  border-radius: 10px;
 }
 .contacts-img img {
   width: 100%;
@@ -689,6 +689,10 @@ a.header-btns-item:hover::before {
 @media (max-width: 576px) {
   .contacts-content {
     grid-template-columns: 1fr;
+  }
+  .contacts-content::before,
+  .contacts-content::after {
+    display: none;
   }
 }
 

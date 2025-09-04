@@ -18,24 +18,29 @@
 
 <div class="header">
     <div id="home" class="banner">
-        <div class="banner-logo">
-            <h1 class="wow fadeInRight">QuranAcademy</h1>
-        </div>
-        <div class="banner-content">
-            <h2 class="wow fadeInLeft">Обучение чтению Корана для детей и женщин</h2>
-            <div class="subtitle wow fadeInLeft" data-wow-duration=".5s">С любовью, вниманием и в соответствии с сунной</div>
-            <div class="header-btns">
-                <a href="#contacts" class="header-btns-item wow fadeInUpBig" data-wow-delay=".8s">Записаться</a>
-                <a href="#about" class="header-btns-item wow fadeInUpBig" data-wow-delay=".5s">Подробнее</a>
+        <div class="banner-inner">
+            <div class="banner-logo">
+                <img src="images/logo_Quran.png">
+            </div>
+            <div class="banner-title">
+                <h1 class="wow fadeInRight">QuranAcademy</h1>
+            </div>
+            <div class="banner-content">
+                <h2 class="wow fadeInLeft">Обучение чтению Корана для детей и женщин</h2>
+                <div class="subtitle">
+                    <p> <span id="typer"></span></p>
+                </div>
+                <div class="header-btns">
+                    <a href="#contacts" class="header-btns-item wow fadeInUpBig" data-wow-delay=".8s">Записаться</a>
+                    <a href="#about" class="header-btns-item wow fadeInUpBig" data-wow-delay=".5s">Подробнее</a>
+                </div>
             </div>
         </div>
     </div>
 
     <nav class="navbar" id="navbar">
         <div class="navbar-inner">
-            <div class="logo-img">
-                <img src="">
-            </div>
+            <div class="logo-title">QuranHome</div>
             <div class="hamburger" id="hamburger">
                 <span></span>
                 <span></span>
@@ -83,7 +88,7 @@
                         Lorem Ipsum is simply dummy text of the printing and typesetting industry.
                     </div>
                 </div>
-                <div class="audience-info wow fadeInUpBig" data-wow-delay=".5s">
+                <div class="audience-info wow fadeInUpBig" data-wow-delay=".1s">
                     <div class="audience-info-img">
                         <img src="images/gold/gold_center_2.png">
                     </div>
@@ -101,7 +106,7 @@
                         Lorem Ipsum is simply dummy text of the printing and typesetting industry.
                     </div>
                 </div>
-                <div class="audience-info wow fadeInUpBig" data-wow-delay=".5s">
+                <div class="audience-info wow fadeInUpBig" data-wow-delay=".1s">
                     <div class="audience-info-img">
                         <img src="images/gold/gold_center_2.png">
                     </div>
@@ -123,13 +128,13 @@
                         Lorem Ipsum is simply dummy text of the printing and typesetting industry.
                     </div>
                 </div>
-                <div class="programs-info wow fadeInUpBig" data-wow-delay=".5s">
+                <div class="programs-info wow fadeInUpBig" data-wow-delay=".3s">
                     <div class="programs-info-title">«Чтение сур»</div>
                     <div class="programs-info-description">
                         Lorem Ipsum is simply dummy text of the printing and typesetting industry.
                     </div>
                 </div>
-                <div class="programs-info wow fadeInUpBig" data-wow-delay=".9s">
+                <div class="programs-info wow fadeInUpBig" data-wow-delay=".5s">
                     <div class="programs-info-title">«Таджвид»</div>
                     <div class="programs-info-description">
                         Lorem Ipsum is simply dummy text of the printing and typesetting industry.
@@ -148,13 +153,13 @@
                         Lorem Ipsum is simply dummy text of the printing and typesetting industry.
                     </div>
                 </div>
-                <div class="format-info wow fadeInUpBig" data-wow-delay=".5s">
+                <div class="format-info wow fadeInUpBig" data-wow-delay=".3s">
                     <div class="format-info-title">Оффлайн (если планируется)</div>
                     <div class="format-info-description">
                         Lorem Ipsum is simply dummy text of the printing and typesetting industry.
                     </div>
                 </div>
-                <div class="format-info wow fadeInUpBig" data-wow-delay=".9s">
+                <div class="format-info wow fadeInUpBig" data-wow-delay=".5s">
                     <div class="format-info-title">Индивидуальные / групповые</div>
                     <div class="format-info-description">
                         Lorem Ipsum is simply dummy text of the printing and typesetting industry.
@@ -230,7 +235,7 @@
             <div class="contacts-content">
                 <div class="contacts-img-wrap">
                     <div class="contacts-img">
-                        <img src="images/user.png">
+                        <img src="images/logo_Quran.png">
                     </div>
                 </div>
                 <div class="contacts-info">
@@ -281,7 +286,8 @@
 <script>
     $(document).ready(function () {
         const $navbar = $('#navbar');
-        const bannerHeight = $('.banner').outerHeight();
+        var bannerHeight = $('.banner').outerHeight();
+        bannerHeight = bannerHeight - 78;
 
         // Фиксация навбара при скролле
         $(window).on('scroll', function () {
@@ -306,8 +312,13 @@
         });
     });
 
-    // Открытие/закрытие гамбургера
+    // Открытие/закрытие гамбургера С,любовью,вниманием,и,в,соответствии,с,сунной
     $(document).ready(function() {
+        $('#typer').typer(['С любовью вниманием и в соответствии с сунной'], {
+            delay: 10000,
+            duration: 1500,
+            endless: true
+        });
         $('#hamburger').click(function() {
             $('#nav-list').stop(true, true).slideToggle(300); 
         });
@@ -334,11 +345,13 @@
             ]
         });
     });
+
 </script>
 <script src="js/wow.min.js"></script>
 <script>
     new WOW().init();
 </script>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script type="text/javascript" src="js/jquery.typer.js"></script>
 </body>
 </html>
