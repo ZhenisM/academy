@@ -214,6 +214,10 @@ a.header-btns-item:hover::before {
   color: #000;
 }
 
+.navbar a.active::before {
+  clip-path: circle(100% at center);
+}
+
 .navbar a span {
   display: block;
 }

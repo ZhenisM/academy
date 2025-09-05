@@ -320,15 +320,12 @@
         });
     });
 
-    // Открытие/закрытие гамбургера 
+    
     $(document).ready(function() {
         $('#typer').typer(['Это модальное окно при заходе на сайт.'], {
             delay: 10000,
             duration: 1500,
             endless: true
-        });
-        $('#hamburger').click(function() {
-            $('#nav-list').stop(true, true).slideToggle(300); 
         });
 
         $('.reviews-slider-js').slick({
@@ -351,6 +348,37 @@
                     }
                 }
             ]
+        });
+    });
+
+    $(document).ready(function () {
+        // Открытие/закрытие гамбургера 
+        $('#hamburger').click(function() {
+            $('#nav-list').stop(true, true).slideToggle(300); 
+        });
+        
+        $('#nav-list a[href^="#"]').on('click', function (e) {
+            e.preventDefault();
+
+            const target = $(this.getAttribute('href'));
+            const headerHeight = 80;
+
+            if (target.length) {
+                $('html, body').animate({
+                    scrollTop: target.offset().top - headerHeight
+                }, 600);
+            }
+
+            // Удаляем класс active у всех ссылок
+            $('#nav-list a').removeClass('active');
+
+            // Добавляем класс active к текущей
+            $(this).addClass('active');
+
+                // Закрытие меню на мобильной версии
+            if ($(window).width() < 768) {
+                $('#nav-list').stop(true, true).slideUp(300);
+            }
         });
     });
 
