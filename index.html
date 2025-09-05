@@ -27,8 +27,8 @@
             </div>
             <div class="banner-content">
                 <h2 class="wow fadeInLeft">Обучение чтению Корана для детей и женщин</h2>
-                <div class="subtitle">
-                    <p> <span id="typer"></span></p>
+                <div class="subtitle wow fadeInLeft" data-wow-delay=".3s">
+                    С любовью вниманием и в соответствии с сунной
                 </div>
                 <div class="header-btns">
                     <a href="#contacts" class="header-btns-item wow fadeInUpBig" data-wow-delay=".8s">Записаться</a>
@@ -281,7 +281,15 @@
         </div>
     </section>
 </div>
-
+<div id="overlay">
+    <div id="modal">
+        <div class="modal-img">
+            <img src="images/logo_Quran.png">
+        </div>
+        <h2>Добро пожаловать!</h2>
+        <p><span id="typer"></span></p>
+    </div>
+</div>
 
 <script>
     $(document).ready(function () {
@@ -312,9 +320,9 @@
         });
     });
 
-    // Открытие/закрытие гамбургера С,любовью,вниманием,и,в,соответствии,с,сунной
+    // Открытие/закрытие гамбургера 
     $(document).ready(function() {
-        $('#typer').typer(['С любовью вниманием и в соответствии с сунной'], {
+        $('#typer').typer(['Это модальное окно при заходе на сайт.'], {
             delay: 10000,
             duration: 1500,
             endless: true
@@ -344,6 +352,25 @@
                 }
             ]
         });
+    });
+
+    document.addEventListener('DOMContentLoaded', function () {
+        const overlay = document.getElementById('overlay');
+
+        closeBtn.addEventListener('click', function () {
+            overlay.style.display = 'none';
+        });
+    });
+
+    $(document).ready(function () {
+        $('#overlay').on('click', function () {
+            $('#overlay').hide();
+        });
+
+        // Автоматическое скрытие через 10 секунд
+        setTimeout(function () {
+            $('#overlay').hide();
+        }, 10000);
     });
 
 </script>
