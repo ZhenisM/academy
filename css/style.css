@@ -63,20 +63,20 @@ section h2 {
   position: relative;
 }
 .banner {
-  background: url('../images/bg_banner.jpeg') center/cover no-repeat;
+  background: url('../images/banner.jpg') center/cover no-repeat;
   height: 70vh;
-  margin-top: 70px; 
 }
 .banner-inner {
   width: 100%;
-  /*height: calc(100% - 80px);
-  background: rgba(0, 0, 0, 0.5);*/
+  height: calc(100% - 80px);
+  background: rgba(0, 0, 0, 0.5);
   display: flex;
   flex-direction: column;
   align-items: center;
   position: relative;
+  padding-top: 80px;
 }
-
+/*
 .banner-logo {
   position: absolute;
   top: 90px;
@@ -86,7 +86,7 @@ section h2 {
 .banner-logo img {
   width: 100%;
 }
-
+*/
 .banner-title {
   text-align: center;
 }
@@ -264,8 +264,9 @@ a.header-btns-item:hover::before {
 
 
 @media (max-width: 768px) {
-  .banner {
-    margin-top: 35px; 
+  .banner-inner {
+    height: 100% ;
+    padding-top: 0;
   }
   .banner-logo {
     display: none;
@@ -702,30 +703,8 @@ a.header-btns-item:hover::before {
   z-index: 9999;
 }
 
-.modal {
-  padding: 30px;
-  border-radius: 8px;
-  max-width: 600px;
-  text-align: center;
-  box-shadow: 0 0 20px rgba(0,0,0,0.3);
-}
-
-
-.modal-img {
-  width: 80%;
-  margin: 0 auto; 
-}
-.modal-img img {
+#overlay img {
   width: 100%;
-}
-.modal h2 {
-  color: #fff;
-  text-transform: uppercase; 
-}
-.modal p {
-  font-size: 24px;
-  color: #fff;
-  text-transform: uppercase; 
 }
 
 
