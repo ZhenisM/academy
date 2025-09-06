@@ -63,18 +63,18 @@ section h2 {
   position: relative;
 }
 .banner {
-  background: url('../images/banner.jpg') center/cover no-repeat;
+  background: url('../images/bg_banner.jpeg') center/cover no-repeat;
   height: 70vh;
+  margin-top: 70px; 
 }
 .banner-inner {
   width: 100%;
-  height: calc(100% - 80px);
-  background: rgba(0, 0, 0, 0.5);
+  /*height: calc(100% - 80px);
+  background: rgba(0, 0, 0, 0.5);*/
   display: flex;
   flex-direction: column;
   align-items: center;
   position: relative;
-  padding-top: 80px;
 }
 
 .banner-logo {
@@ -264,9 +264,8 @@ a.header-btns-item:hover::before {
 
 
 @media (max-width: 768px) {
-  .banner-inner {
-    height: 100% ;
-    padding-top: 0;
+  .banner {
+    margin-top: 35px; 
   }
   .banner-logo {
     display: none;
