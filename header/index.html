@@ -20,12 +20,10 @@
     <nav class="backdrop-filter backdrop-blur bg-black bg-opacity-70 text-yellow-400 shadow">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex items-center justify-between h-16">
-          <!-- Logo -->
           <a href="#" class="flex items-center space-x-2">
             <span class="text-2xl">🌙</span>
             <span class="font-semibold tracking-wide">QuranHome</span>
           </a>
-          <!-- Desktop links -->
           <div class="hidden md:flex items-center space-x-6 text-sm">
             <a href="#about" class="hover:text-white">О преподавателе</a>
             <a href="#method" class="hover:text-white">Методика</a>
@@ -35,13 +33,11 @@
             <a href="#testimonials" class="hover:text-white">Отзывы</a>
             <a href="#contact" class="inline-block bg-yellow-400 text-black px-4 py-2 rounded-xl font-semibold hover:bg-yellow-500 transition">Связаться</a>
           </div>
-          <!-- Mobile button -->
-          <button id="menuBtn" class="md:hidden inline-flex items-center justify-center p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-yellow-400" aria-expanded="false" aria-controls="mobileMenu">
+          <button id="menuBtn" class="md:hidden inline-flex items-center justify-center p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-yellow-400">
             <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
           </button>
         </div>
       </div>
-      <!-- Mobile menu -->
       <div id="mobileMenu" class="md:hidden hidden border-t border-yellow-500/30">
         <div class="px-4 py-3 space-y-2">
           <a href="#about" class="block py-2 hover:text-white">О преподавателе</a>
@@ -54,44 +50,7 @@
         </div>
       </div>
     </nav>
-  </header>  <!-- NAVBAR -->  <header class="fixed top-0 left-0 w-full bg-black bg-opacity-90 text-yellow-400 shadow z-50">
-    <div class="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
-      <div class="text-2xl font-bold tracking-wide">🌙 QuranHome</div>
-      <nav class="hidden md:flex space-x-6 font-semibold">
-        <a href="#about" class="hover:text-white transition">О преподавателе</a>
-        <a href="#method" class="hover:text-white transition">Методика</a>
-        <a href="#book" class="hover:text-white transition">Книга</a>
-        <a href="#courses" class="hover:text-white transition">Курсы</a>
-        <a href="#video" class="hover:text-white transition">Ученики</a>
-        <a href="#testimonials" class="hover:text-white transition">Отзывы</a>
-        <a href="#contact" class="hover:text-white transition">Контакты</a>
-      </nav>
-      <!-- Mobile menu button -->
-      <div class="md:hidden">
-        <button id="menu-btn" class="focus:outline-none">
-          <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
-          </svg>
-        </button>
-      </div>
-    </div>
-    <!-- Mobile dropdown -->
-    <div id="mobile-menu" class="hidden md:hidden bg-black bg-opacity-95 text-yellow-400 px-6 py-4 space-y-4">
-      <a href="#about" class="block hover:text-white">О преподавателе</a>
-      <a href="#method" class="block hover:text-white">Методика</a>
-      <a href="#book" class="block hover:text-white">Книга</a>
-      <a href="#courses" class="block hover:text-white">Курсы</a>
-      <a href="#video" class="block hover:text-white">Ученики</a>
-      <a href="#testimonials" class="block hover:text-white">Отзывы</a>
-      <a href="#contact" class="block hover:text-white">Контакты</a>
-    </div>
-  </header>  <script>
-    const menuBtn = document.getElementById('menu-btn');
-    const mobileMenu = document.getElementById('mobile-menu');
-    menuBtn.addEventListener('click', () => {
-      mobileMenu.classList.toggle('hidden');
-    });
-  </script>  <!-- HERO -->  <section class="bg-black text-yellow-400 min-h-screen flex flex-col items-center justify-center text-center p-8 ornament pt-32 pt-24">
+  </header>  <!-- HERO -->  <section class="bg-black text-yellow-400 min-h-screen flex flex-col items-center justify-center text-center p-8 pt-24 ornament">
     <div class="mb-6">
       <div class="text-5xl font-bold tracking-wide">🌙 QuranHome</div>
     </div>
@@ -104,21 +63,80 @@
       <a href="#method" class="bg-yellow-400 text-black px-6 py-3 rounded-2xl shadow-lg font-semibold hover:bg-yellow-500 transition">Узнать о методике</a>
       <a href="#courses" class="bg-transparent border-2 border-yellow-400 text-yellow-400 px-6 py-3 rounded-2xl hover:bg-yellow-400 hover:text-black transition">Записаться на курс</a>
     </div>
-  </section>  <!-- Остальной код остаётся таким же, как в предыдущей версии (About, Method, Book, Courses, Video, Testimonials, Contact, Footer) -->  <script>
-    // Smooth scrolling for anchor links
+  </section>  <!-- ABOUT -->  <section id="about" class="py-16 px-8 bg-gray-50 text-center">
+    <h2 class="text-3xl font-bold mb-6">О преподавателе</h2>
+    <p class="max-w-3xl mx-auto text-lg leading-relaxed">
+      Ас-саляму алейкум! Я обучаю чтению Корана более 10 лет. По моей авторской методике даже те, кто никогда не изучал арабский, начинают читать уже через месяц. Альхамдулиллях, более 1000 учеников прошли мои занятия.
+    </p>
+  </section>  <!-- METHOD -->  <section id="method" class="py-16 px-8 bg-white text-center">
+    <h2 class="text-3xl font-bold mb-6">Что делает методику уникальной?</h2>
+    <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+      <div class="p-6 bg-gray-50 rounded-2xl shadow">
+        <div class="text-4xl mb-4">📘</div>
+        <h3 class="text-xl font-semibold mb-2">Простые шаги</h3>
+        <p>Буквы → слоги → чтение (понятная последовательность)</p>
+      </div>
+      <div class="p-6 bg-gray-50 rounded-2xl shadow">
+        <div class="text-4xl mb-4">⏳</div>
+        <h3 class="text-xl font-semibold mb-2">Быстрый результат</h3>
+        <p>30 дней до первых аятов своими силами</p>
+      </div>
+      <div class="p-6 bg-gray-50 rounded-2xl shadow">
+        <div class="text-4xl mb-4">🌍</div>
+        <h3 class="text-xl font-semibold mb-2">Для всех возрастов</h3>
+        <p>Подходит детям и взрослым, с нуля</p>
+      </div>
+    </div>
+  </section>  <!-- BOOK -->  <section id="book" class="py-16 px-8 bg-white text-center">
+    <h2 class="text-3xl font-bold mb-6">Книга</h2>
+    <p class="max-w-2xl mx-auto text-lg mb-6">
+      Методика, описанная в моей книге, проверена годами и десятками групп. Получите первый раздел бесплатно и оцените подход.
+    </p>
+    <a href="#" class="bg-yellow-400 text-black px-6 py-3 rounded-2xl shadow-lg font-semibold hover:bg-yellow-500 transition">📥 Скачать первую главу бесплатно</a>
+  </section>  <!-- COURSES -->  <section id="courses" class="py-16 px-8 bg-gray-50 text-center ornament">
+    <h2 class="text-3xl font-bold mb-6">Курсы</h2>
+    <div class="max-w-3xl mx-auto text-lg">
+      <p class="mb-2">Форматы: онлайн (Zoom / WhatsApp), оффлайн</p>
+      <p class="mb-2">Длительность: 1 месяц (интенсив), возможны продвинутые уровни</p>
+      <a href="#contact" class="mt-4 inline-block bg-yellow-400 text-black px-6 py-3 rounded-2xl shadow-lg font-semibold hover:bg-yellow-500 transition">✍ Записаться</a>
+    </div>
+  </section>  <!-- VIDEOS -->  <section id="video" class="py-16 px-8 bg-white text-center">
+    <h2 class="text-3xl font-bold mb-6">Наши ученики</h2>
+    <p class="mb-8">Посмотрите, как ученики уже через месяц начинают читать Коран</p>
+    <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+      <div class="video-responsive">
+        <iframe src="https://www.youtube.com/embed/ID_РОЛИКА" title="Видео 1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+      <div class="video-responsive">
+        <iframe src="https://www.youtube.com/embed/ID_РОЛИКА2" title="Видео 2" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+    </div>
+  </section>  <!-- TESTIMONIALS -->  <section id="testimonials" class="py-16 px-8 bg-gray-50 text-center">
+    <h2 class="text-3xl font-bold mb-6">Отзывы учеников</h2>
+    <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+      <div class="p-6 bg-white rounded-2xl shadow"><p>«Через 4 недели я смогла читать аяты сама. Альхамдулиллях!»</p></div>
+      <div class="p-6 bg-white rounded-2xl shadow"><p>«Методика простая и понятная. Я начала читать уже через месяц.»</p></div>
+      <div class="p-6 bg-white rounded-2xl shadow"><p>«Очень благодарен за терпение и внимание на занятиях!»</p></div>
+    </div>
+  </section>  <!-- CONTACTS -->  <section id="contact" class="py-16 px-8 bg-gray-900 text-center text-white ornament">
+    <h2 class="text-3xl font-bold mb-6">Контакты</h2>
+    <p class="mb-2">Телефон: +7 700 000 00 00</p>
+    <p class="mb-2">WhatsApp | Telegram</p>
+    <a href="#" class="mt-6 inline-block bg-yellow-400 text-black px-6 py-3 rounded-2xl shadow-lg font-semibold hover:bg-yellow-500 transition">💬 Задать вопрос</a>
+  </section>  <!-- FOOTER -->  <footer class="bg-black text-yellow-400 text-center p-6">
+    QuranHome © Все права защищены.
+  </footer>  <script>
     document.querySelectorAll('a[href^="#"]').forEach(a => {
       a.addEventListener('click', (e) => {
         const targetId = a.getAttribute('href');
         if (targetId.length > 1) {
           e.preventDefault();
           document.querySelector(targetId).scrollIntoView({ behavior: 'smooth' });
-          // Close mobile menu after click
           const mm = document.getElementById('mobileMenu');
           if (mm && !mm.classList.contains('hidden')) mm.classList.add('hidden');
         }
       });
     });
-    // Mobile menu toggle
     const menuBtn = document.getElementById('menuBtn');
     const mobileMenu = document.getElementById('mobileMenu');
     if (menuBtn && mobileMenu) {
