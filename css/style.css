@@ -2,6 +2,9 @@
   --green: #182D09;
   --green-two: #395228;
   --gold: #e8c439;
+  --yellow: #fbbf24;
+  --dark: #010101;
+  --grey: #333333;
 }
 
 @font-face {
@@ -65,17 +68,18 @@ section h2 {
 }
 .banner-inner {
   width: 100%;
-  height: 100%;
+  height: calc(100% - 80px);
   background: rgba(0, 0, 0, 0.5);
   display: flex;
   flex-direction: column;
   align-items: center;
   position: relative;
+  padding-top: 80px;
 }
 
 .banner-logo {
   position: absolute;
-  top: 10px;
+  top: 90px;
   left: 10px;
   width: 150px;
 }
@@ -88,10 +92,7 @@ section h2 {
 }
 
 .banner-title h1 {
-  background: linear-gradient(45deg, #ffd700, #e5c100, #b59f00);
-  color: transparent;
-  background-clip: text;
-  -webkit-background-clip: text;
+  color: var(--yellow);
   margin-bottom: 1rem;
   font-size: 3rem;
 }
@@ -119,7 +120,7 @@ section h2 {
 }
 
 a.header-btns-item  {
-  background-color: var(--green);
+  background-color: var(--dark);
   color: #fff;
   padding: 10px 30px;
   border-radius: 4px;
@@ -139,7 +140,7 @@ a.header-btns-item::before {
   left: 0;
   width: 100%;
   height: 100%;
-  background: var(--green-two);
+  background: var(--grey);
   clip-path: circle(0 at center);
   transition: clip-path 0.8s;
   z-index: -1;
@@ -156,13 +157,12 @@ a.header-btns-item:hover::before {
 /*-------------------------------------------*/
 
 .navbar {
-  background: var(--green);
+  background: var(--dark);
   color: white;
-  position: relative;
+  position: fixed;
   width: 100%;
   z-index: 100;
-  position: absolute;
-  bottom: 0;
+  top: 0;
   left: 0;
 }
 
@@ -189,7 +189,7 @@ a.header-btns-item:hover::before {
 .navbar a {
   display: block;
   padding: 10px 70px;
-  color: white;
+  color: var(--yellow);
   text-decoration: none;
   position: relative;
   overflow: hidden;
@@ -203,7 +203,7 @@ a.header-btns-item:hover::before {
   left: 0;
   width: 100%;
   height: 100%;
-  background: var(--green-two);
+  background: var(--grey);
   clip-path: circle(0 at center);
   transition: clip-path 0.8s;
   z-index: -1;
@@ -264,16 +264,12 @@ a.header-btns-item:hover::before {
 
 
 @media (max-width: 768px) {
+  .banner-inner {
+    height: 100% ;
+    padding-top: 0;
+  }
   .banner-logo {
     display: none;
-  }
-  .navbar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    bottom: auto;
-    width: 100%;
-    z-index: 1000;
   }
 
   .navbar ul {
@@ -281,7 +277,7 @@ a.header-btns-item:hover::before {
     flex-direction: column;
     width: 100%;
     text-align: center;
-    background-color: var(--green);
+    background-color: var(--dark);
     position: absolute;
     top: 100%;
     left: 0;
@@ -339,11 +335,7 @@ a.header-btns-item:hover::before {
   display: grid;
   grid-template-columns: 1fr 3fr;
   gap: 10px;
-  background: linear-gradient(to right, 
-              #395228 0%, 
-              #182D09 25%,
-              #182D09 75%,
-              #395228 100%);
+  background-color: var(--dark);
   padding: 20px;
   border-radius: 4px;
   color: #fff;
@@ -399,8 +391,8 @@ a.header-btns-item:hover::before {
   flex-direction: column;
   align-items: center;
   gap: 10px;
-  background-color: var(--green);
-  color: var(--gold);
+  background-color: var(--dark);
+  color: #fff;
   padding: 20px;
   border-radius: 4px;
 }
@@ -447,8 +439,8 @@ a.header-btns-item:hover::before {
   flex-direction: column;
   align-items: center;
   gap: 10px;
-  background-color: var(--green);
-  color: var(--gold);
+  background-color: var(--dark);
+  color: #fff;
   padding: 20px;
   border-radius: 4px;
   position: relative;
@@ -507,8 +499,8 @@ a.header-btns-item:hover::before {
   flex-direction: column;
   align-items: center;
   gap: 10px;
-  background-color: var(--green);
-  color: var(--gold);
+  background-color: var(--dark);
+  color: #fff;
   padding: 20px;
   border-radius: 4px;
   position: relative;
@@ -573,7 +565,7 @@ a.header-btns-item:hover::before {
   display: grid;
   grid-template-columns: 1fr 3fr;
   gap: 20px;
-  background-color: var(--green);
+  background-color: var(--dark);
   padding: 20px;
   border-radius: 4px;
 }
@@ -581,7 +573,7 @@ a.header-btns-item:hover::before {
   
 }
 .reviews-slider-item-img {
-  background-color: var(--gold);
+  background-color: var(--yellow);
   padding: 10px;
   border-radius: 4px;
 }
@@ -589,10 +581,10 @@ a.header-btns-item:hover::before {
   width: 100%;
 }
 .reviews-slider-item-name {
-  color: var(--gold);
+  color: #fff;
 }
 .reviews-slider-item-text {
-  color: var(--gold);
+  color: #fff;
 }
 .reviews-slider .slick-prev, .reviews-slider .slick-next {
   z-index: 10;
@@ -614,11 +606,7 @@ a.header-btns-item:hover::before {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 20px;
-  background: linear-gradient(to right, 
-              #395228 0%, 
-              #182D09 25%,
-              #182D09 75%,
-              #395228 100%);
+  background-color: var(--dark);
   padding: 20px;
   border-radius: 4px;
   color: #fff;
@@ -650,7 +638,7 @@ a.header-btns-item:hover::before {
 }
 .contacts-img {
   max-width: 300px;
-  background-color: var(--gold);
+  background-color: var(--yellow);
   padding: 10px;
   border-radius: 10px;
 }
@@ -678,7 +666,7 @@ a.header-btns-item:hover::before {
   gap: 20px;
 }
 .contacts-social-item{
-    background-color: var(--gold);
+    background-color: var(--yellow);
     width: 40px;
     height: 40px;
     border-radius: 50%;
@@ -715,24 +703,14 @@ a.header-btns-item:hover::before {
   z-index: 9999;
 }
 
-#modal {
-  background: white;
+.modal {
   padding: 30px;
   border-radius: 8px;
-  max-width: 400px;
+  max-width: 600px;
   text-align: center;
   box-shadow: 0 0 20px rgba(0,0,0,0.3);
 }
 
-#closeModal {
-  margin-top: 20px;
-  padding: 10px 20px;
-  background: #007bff;
-  color: white;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-}
 
 .modal-img {
   width: 80%;
@@ -741,9 +719,13 @@ a.header-btns-item:hover::before {
 .modal-img img {
   width: 100%;
 }
-
-#modal p {
+.modal h2 {
+  color: #fff;
+  text-transform: uppercase; 
+}
+.modal p {
   font-size: 24px;
+  color: #fff;
   text-transform: uppercase; 
 }
 

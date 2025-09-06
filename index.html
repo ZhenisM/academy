@@ -282,30 +282,17 @@
     </section>
 </div>
 <div id="overlay">
-    <div id="modal">
+    <div class="modal">
         <div class="modal-img">
             <img src="images/logo_Quran.png">
         </div>
         <h2>Добро пожаловать!</h2>
-        <p><span id="typer"></span></p>
+        <p><span id="typer"></span></p>        
     </div>
 </div>
 
 <script>
     $(document).ready(function () {
-        const $navbar = $('#navbar');
-        var bannerHeight = $('.banner').outerHeight();
-        bannerHeight = bannerHeight - 78;
-
-        // Фиксация навбара при скролле
-        $(window).on('scroll', function () {
-          if ($(window).scrollTop() >= bannerHeight) {
-            $navbar.addClass('fixed');
-          } else {
-            $navbar.removeClass('fixed');
-          }
-        });
-
         // Плавная прокрутка до якорей
         $('#navbar a[href^="#"]').on('click', function (e) {
           e.preventDefault();
@@ -318,10 +305,7 @@
             }, 600);
           }
         });
-    });
 
-    
-    $(document).ready(function() {
         $('#typer').typer(['Это модальное окно при заходе на сайт.'], {
             delay: 10000,
             duration: 1500,
@@ -349,9 +333,7 @@
                 }
             ]
         });
-    });
 
-    $(document).ready(function () {
         // Открытие/закрытие гамбургера 
         $('#hamburger').click(function() {
             $('#nav-list').stop(true, true).slideToggle(300); 
@@ -380,12 +362,10 @@
                 $('#nav-list').stop(true, true).slideUp(300);
             }
         });
-    });
 
-    $(document).ready(function () {
-        $('#overlay').on('click', function () {
+        /*$('#overlay').on('click', function () {
             $('#overlay').hide();
-        });
+        });*/
 
         // Автоматическое скрытие через 10 секунд
         setTimeout(function () {
