@@ -13,6 +13,33 @@
   font-weight: normal;
   font-style: normal;
 }
+@font-face {
+  font-family: 'Segoe UI';
+  src: url('fonts/Segoe UI/Segoe UI.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Segoe UI';
+  src: url('fonts/Segoe UI/Segoe UI Italic.ttf') format('truetype');
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Segoe UI';
+  src: url('fonts/Segoe UI/Segoe UI Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Segoe UI';
+  src: url('fonts/Segoe UI/Segoe UI Bold Italic.ttf') format('truetype');
+  font-weight: 700;
+  font-style: italic;
+}
 
 
 body {
@@ -192,7 +219,7 @@ a.header-btns-item:hover {
 
 .navbar a {
   display: block;
-  padding: 10px 70px;
+  padding: 10px 70px 15px;
   color: var(--yellow);
   text-decoration: none;
   position: relative;
@@ -226,7 +253,6 @@ a.header-btns-item:hover {
   display: block;
 }
 .navbar a span:first-child {
-  border-bottom: solid 1px;
   font-size: 16px;
 }
 .navbar a span.arabic {
