@@ -17,13 +17,8 @@
 
 body {
   margin: 0;
-  font-family: 'Papyrus', sans-serif;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   scroll-behavior: smooth;
-  /*background: linear-gradient(to right, 
-              #266f4e 0%, 
-              #014b2a 15%,
-              #014b2a 85%,
-              #266f4e 100%);*/
   background-image: url(../images/arabic.jpg);
   background-repeat: revert;
   background-size: 10%;
@@ -38,7 +33,6 @@ body {
 section {
   padding: 20px;
   background: linear-gradient(to right, #f5f3f099 0%, #f5f3f099 25%, #f5f3f099 75%, #f5f3f099 100%);
-  /*background: linear-gradient(to right, #387b5599 0%, #014b2a99 25%, #014b2a99 75%, #387b5599 100%);*/
 }
 
 section h2 {
