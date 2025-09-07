@@ -648,7 +648,6 @@ a.header-btns-item:hover {
 }
 .contacts-img {
   max-width: 300px;
-  background-color: var(--yellow);
   padding: 10px;
   border-radius: 10px;
 }
