@@ -1,1 +1,16 @@
-© 2006 Microsoft Corporation. All Rights Reserved.
+
+путь до шрифтов fonts/Segoe UI/
+Segoe UI.ttf
+Segoe UI Bold.ttf
+Segoe UI Bold Italic.ttf
+Segoe UI Italic.ttf
+
+
+
+
+
+
+
+
+
+
