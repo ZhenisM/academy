@@ -47,24 +47,21 @@ body {
   margin: 0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   scroll-behavior: smooth;
-  background-image: url(../images/arabic.jpg);
-  background-repeat: revert;
-  background-size: 10%;
 }
 
 .container {
   width: 80%;
   margin: 0 auto;
-  /*background-image: url(../images/green_bg.png);*/
-  background-color: var(--milk);
 }
 .container-block {
-  padding-top: 40px;
+  padding: 40px 0;
 }
 
 section {
-  /*padding: 20px;
-  background: linear-gradient(to right, #f5f3f099 0%, #f5f3f099 25%, #f5f3f099 75%, #f5f3f099 100%);*/
+  padding: 0 10px;
+}
+section.about {
+  background-color: var(--milk);
 }
 
 section h2 {
@@ -99,17 +96,7 @@ section h2 {
   position: relative;
   padding-top: 80px;
 }
-/*
-.banner-logo {
-  position: absolute;
-  top: 90px;
-  left: 10px;
-  width: 150px;
-}
-.banner-logo img {
-  width: 100%;
-}
-*/
+
 .banner-title {
   text-align: center;
 }
@@ -373,9 +360,8 @@ a.header-btns-item:hover {
 }
 .about-content {
   display: grid;
-  grid-template-columns: 1fr 3fr;
+  grid-template-columns: 2fr 1fr;
   gap: 10px;
-  padding: 20px;
   border-radius: 4px;
   position: relative;
 }
@@ -404,7 +390,7 @@ a.header-btns-item:hover {
   width: 100%;
 }
 .about-img img {
-  width: 100%;
+  width: 70%;
 }
 .about-info {
   
@@ -419,6 +405,12 @@ a.header-btns-item:hover {
   }
 }
 /*---------------------------------------------*/
+.ornament{
+  display:block;
+  margin:12px auto 40px;      /* отступы под заголовком */
+  width:min(220px, 40%);      /* ширина орнамента */
+  color:#b97929;              /* «золото»; можно var(--gold) */
+}
 .audience-content {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -429,9 +421,12 @@ a.header-btns-item:hover {
   flex-direction: column;
   align-items: center;
   gap: 10px;
-  padding: 20px;
+  padding: 20px 20px 45px;
   border-radius: 4px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e5e5e5;
 }
+
 .audience-info-img {
   width: 40%;
   margin: 0 auto;
@@ -447,6 +442,8 @@ a.header-btns-item:hover {
 
 .audience-info-description {
   font-size: 16px;
+  text-align: center;
+  line-height: 28px;
 }
 
 .audience-info-list {
@@ -456,9 +453,50 @@ a.header-btns-item:hover {
 .audience-info-list li {
   font-size: 20px;
 }
+
+.audience-info-btn  {
+  background-color: var(--yellow);
+  color: var(--dark);
+  padding: 10px 30px;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: all 0.8s;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.audience-info-btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #fbbf2450;
+  clip-path: circle(0 at center);
+  transition: clip-path 0.8s;
+  z-index: -1;
+}
+
+.audience-info-btn:hover::before {
+  clip-path: circle(100% at center);
+  color: #000;
+}
+.audience-info-btn:hover {
+  background-color: transparent;
+}
+
 @media (max-width: 768px) {
   .audience-content {
     grid-template-columns: 1fr;
+  }
+  .about-img img {
+    margin: 0 auto;
+    display: block;
   }
 }
 
@@ -587,8 +625,12 @@ a.header-btns-item:hover {
 }
 
 /*---------------------------------------*/
-
-
+section.contacts {
+  background-color: var(--grey);
+}
+section.contacts h2 {
+    color: var(--milk);
+}
 .contacts-block {
 
 }
@@ -596,44 +638,33 @@ a.header-btns-item:hover {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 20px;
-  background-color: var(--dark);
-  padding: 20px;
   border-radius: 4px;
   color: #fff;
   position: relative;
 }
 
-.contacts-content::before,
-.contacts-content::after {
-  content: '';
-  position: absolute;
-  width: 100px;
-  height: 100px;
-  background-image: url('../images/gold/gold_3.png');
-  background-size: contain;
-  background-repeat: no-repeat;
-}
-.contacts-content::before {
-  top: 0;
-  left: 0;
-}
-.contacts-content::after {
-  bottom: 0;
-  right: 0;
-  transform: scale(-1, -1);
-}
 .contacts-img-wrap {
   display: flex;
   justify-content: center;
 }
-.contacts-img {
-  max-width: 300px;
-  padding: 10px;
-  border-radius: 10px;
-}
-.contacts-img img {
+.contacts-map {
+  position: relative;
   width: 100%;
+  padding-bottom: 56.25%; /* Соотношение 16:9 */
+  height: 0;
+  overflow: hidden;
+  border-radius: 8px; /* по желанию, скругление */
 }
+
+.contacts-map iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
 .contacts-info {
   
 }
@@ -676,6 +707,14 @@ a.header-btns-item:hover {
     display: none;
   }
 }
+
+.footer {
+  background-color: var(--dark);
+  color: #fff;
+  text-align: center;
+  padding: 20px; 
+}
+
 /*-----------------------------------------------*/
 
 
@@ -818,7 +857,11 @@ form button:hover {
 }
 
 
-
+@media (max-width: 576px) {
+  .modal-content {
+    width: 80%;
+  }
+}
 
 
 
