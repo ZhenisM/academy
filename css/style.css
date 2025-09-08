@@ -407,7 +407,7 @@ a.header-btns-item:hover {
 /*---------------------------------------------*/
 .ornament{
   display:block;
-  margin:12px auto 22px;      /* отступы под заголовком */
+  margin:12px auto 40px;      /* отступы под заголовком */
   width:min(220px, 40%);      /* ширина орнамента */
   color:#b97929;              /* «золото»; можно var(--gold) */
 }
