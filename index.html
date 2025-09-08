@@ -48,7 +48,7 @@
                     Начни читать Коран уже через 1 месяц
                 </div>
                 <div class="header-btns">
-                    <a href="" id="contact-form" class="header-btns-item wow fadeInUpBig" data-wow-delay=".8s">Записаться на курс</a>
+                    <a href="" id="contact-form" class="contact-form header-btns-item wow fadeInUpBig" data-wow-delay=".8s">Записаться на курс</a>
                 </div>
             </div>
         </div>
@@ -81,9 +81,6 @@
         <div class="about-block container-block">
             <h2 class="" data-wow-delay=".5s">О центре QuranHome</h2>
             <div class="about-content">
-                <div class="about-img">
-                    <img src="images/user.png">
-                </div>
                 <div class="about-info">
                     <div class="about-info-description">
                         <b>QuranHome</b> — это обучающий центр, где женщины и дети делают первые шаги к чтению Корана в живой, офлайн-атмосфере.
@@ -104,6 +101,9 @@
                         <b>Наша цель</b> — чтобы каждый ученик почувствовал уверенность и радость от чтения Корана.
                     </div>
                 </div>
+                <div class="about-img">
+                    <img src="images/about.png">
+                </div>
             </div>
         </div>
     </div>
@@ -112,42 +112,47 @@
     <div class="container">
         <div class="audience-block container-block">
             <h2 class="">Для кого курс</h2>
+            <svg class="ornament" viewBox="0 0 600 60" role="img" aria-hidden="true">
+              <g fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M300 10 320 30 300 50 280 30Z" fill="currentColor"/>
+                <g>
+                  <path d="M280 30C245 30 235 50 205 50S165 30 145 30 112 42 95 42"/>
+                  <path d="M260 30c-20 0-30 10-45 10"/>
+                  <circle cx="230" cy="30" r="2" fill="currentColor"/>
+                </g>
+                <g transform="translate(600,0) scale(-1,1)">
+                  <path d="M280 30C245 30 235 50 205 50S165 30 145 30 112 42 95 42"/>
+                  <path d="M260 30c-20 0-30 10-45 10"/>
+                  <circle cx="230" cy="30" r="2" fill="currentColor"/>
+                </g>
+              </g>
+            </svg>
             <div class="audience-content">
                 <div class="audience-info">
                     <div class="audience-info-img">
-                        <img src="images/gold/gold_center_2.png">
+                        <img src="images/who_baby.png">
                     </div>
-                    <div class="audience-info-title">👶 Дети от 5 лет</div>
+                    <div class="audience-info-title">Дети от 5 лет</div>
                     <div class="audience-info-description">
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                        Наши занятия помогают детям с раннего возраста полюбить Коран. 
+                        Мы используем простую и понятную методику: шаг за шагом ребёнок 
+                        осваивает арабский алфавит и начинает читать Коран уже через короткое время.
+                        Атмосфера доброты и поддержки делает процесс лёгким и увлекательным.
                     </div>
+                    <div class="contact-form audience-info-btn">Записать ребенка</div>
                 </div>
                 <div class="audience-info">
                     <div class="audience-info-img">
-                        <img src="images/gold/gold_center_2.png">
+                        <img src="images/who_woman.png">
                     </div>
-                    <div class="audience-info-title">👩 Женщины</div>
+                    <div class="audience-info-title">Дети от 5 лет</div>
                     <div class="audience-info-description">
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                        Курс для женщин создан для тех, кто хочет научиться читать Коран с нуля
+                        или укрепить свои знания. Мы учитываем индивидуальные особенности каждой ученицы,
+                        чтобы процесс обучения был комфортным и вдохновляющим.
+                        Уроки проходят в дружеской и уважительной обстановке, помогая приблизиться к духовности.
                     </div>
-                </div>
-                <div class="audience-info">
-                    <div class="audience-info-img">
-                        <img src="images/gold/gold_center_2.png">
-                    </div>
-                    <div class="audience-info-title">🕌 Начинающие в изучении Корана</div>
-                    <div class="audience-info-description">
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                    </div>
-                </div>
-                <div class="audience-info">
-                    <div class="audience-info-img">
-                        <img src="images/gold/gold_center_2.png">
-                    </div>
-                    <div class="audience-info-title">📖 Те, кто хочет улучшить таджвид</div>
-                    <div class="audience-info-description">
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                    </div>
+                    <div class="contact-form audience-info-btn">Записаться</div>
                 </div>
             </div>
         </div>
@@ -357,7 +362,7 @@
         $('#navbar a[href^="#"]').on('click', function (e) {
           e.preventDefault();
           const target = $(this.getAttribute('href'));
-          const headerHeight = 80; // высота фиксированного меню
+          const headerHeight = 45; // высота фиксированного меню
 
           if (target.length) {
             $('html, body').animate({
@@ -403,7 +408,7 @@
             e.preventDefault();
 
             const target = $(this.getAttribute('href'));
-            const headerHeight = 80;
+            const headerHeight = 45;
 
             if (target.length) {
                 $('html, body').animate({
@@ -423,19 +428,15 @@
             }
         });
 
-        /*$('#overlay').on('click', function () {
-            $('#overlay').hide();
-        });*/
-
-        // Автоматическое скрытие через 10 секунд
+        // Автоматическое скрытие через 9 секунд
         setTimeout(function () {
             $('#overlay').hide();
-        }, 10000);
+        }, 9000);
     });
 
     $(document).ready(function () {
         // Открытие модалки
-        $('#contact-form').on('click', function (e) {
+        $('.contact-form').on('click', function (e) {
             e.preventDefault();
             $('#modal').fadeIn();
         });
