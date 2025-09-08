@@ -625,8 +625,12 @@ a.header-btns-item:hover {
 }
 
 /*---------------------------------------*/
-
-
+section.contacts {
+  background-color: var(--dark);
+}
+section.contacts h2 {
+    color: var(--milk);
+}
 .contacts-block {
 
 }
@@ -634,44 +638,33 @@ a.header-btns-item:hover {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 20px;
-  background-color: var(--dark);
-  padding: 20px;
   border-radius: 4px;
   color: #fff;
   position: relative;
 }
 
-.contacts-content::before,
-.contacts-content::after {
-  content: '';
-  position: absolute;
-  width: 100px;
-  height: 100px;
-  background-image: url('../images/gold/gold_3.png');
-  background-size: contain;
-  background-repeat: no-repeat;
-}
-.contacts-content::before {
-  top: 0;
-  left: 0;
-}
-.contacts-content::after {
-  bottom: 0;
-  right: 0;
-  transform: scale(-1, -1);
-}
 .contacts-img-wrap {
   display: flex;
   justify-content: center;
 }
-.contacts-img {
-  max-width: 300px;
-  padding: 10px;
-  border-radius: 10px;
-}
-.contacts-img img {
+.contacts-map {
+  position: relative;
   width: 100%;
+  padding-bottom: 56.25%; /* Соотношение 16:9 */
+  height: 0;
+  overflow: hidden;
+  border-radius: 8px; /* по желанию, скругление */
 }
+
+.contacts-map iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
 .contacts-info {
   
 }
