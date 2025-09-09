@@ -54,7 +54,7 @@ body {
   margin: 0 auto;
 }
 .container-block {
-  padding: 40px 0;
+  padding: 40px 0 60px;
 }
 
 section {
@@ -69,7 +69,7 @@ section h2 {
   font-weight: bold;
   font-size: 3rem;
   text-align: center;
-  margin: 0 0 40px;
+  margin: 0 0 20px;
 }
 
 .golden-text {
@@ -407,7 +407,7 @@ a.header-btns-item:hover {
 /*---------------------------------------------*/
 .ornament{
   display:block;
-  margin:12px auto 40px;      /* отступы под заголовком */
+  margin:12px auto 60px;      /* отступы под заголовком */
   width:min(220px, 40%);      /* ширина орнамента */
   color:#b97929;              /* «золото»; можно var(--gold) */
 }
@@ -444,6 +444,7 @@ a.header-btns-item:hover {
   font-size: 16px;
   text-align: center;
   line-height: 28px;
+  margin-bottom: 20px;
 }
 
 .audience-info-list {
@@ -523,9 +524,10 @@ section.programs {
 .programs-info-title {
   width: 100%;
   font-weight: 600;
-  font-size: 18px;
+  font-size: 20px;
   text-align: center;
   margin-bottom: 10px;
+  height: 60px;
 }
 
 .programs-info-description {
