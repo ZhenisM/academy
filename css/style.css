@@ -84,7 +84,7 @@ section h2 {
 }
 .banner {
   background: url('../images/bg_banner_2.jpg') center/cover no-repeat;
-  height: 80vh;
+  height: 85vh;
 }
 .banner-inner {
   width: 100%;
@@ -287,6 +287,9 @@ a.header-btns-item:hover {
 
 
 @media (max-width: 768px) {
+  .banner {
+    height: 80vh;
+  }
   .banner-inner {
     height: 100% ;
     padding-top: 0;
