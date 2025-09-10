@@ -288,7 +288,10 @@ a.header-btns-item:hover {
 
 @media (max-width: 768px) {
   .banner {
-    height: 80vh;
+    height: 75vh;
+  }
+  .logo-img {
+    width: 150px;
   }
   .banner-inner {
     height: 100% ;
