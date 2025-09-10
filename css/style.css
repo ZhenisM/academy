@@ -649,8 +649,15 @@ section.programs {
   .pricing-section {
       padding: 40px 10px;
   }
+  .pricing-card {
+    width: 100%;
+  }
   .pricing-title {
     font-size: 28px;
+  }
+  .pricing-card-item {
+    align-items: start;
+    flex-direction: column;
   }
 }
 /*---------------------------------------*/
