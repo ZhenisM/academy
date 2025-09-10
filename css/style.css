@@ -288,7 +288,7 @@ a.header-btns-item:hover {
 
 @media (max-width: 768px) {
   .banner {
-    height: 75vh;
+    height: 100%;
   }
   .logo-img {
     width: 150px;
@@ -296,6 +296,7 @@ a.header-btns-item:hover {
   .banner-inner {
     height: 100% ;
     padding-top: 0;
+    padding-bottom: 20px;
   }
   .banner-title {
     text-align: center;
