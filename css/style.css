@@ -571,6 +571,10 @@ section.programs {
 }
 
 @media (max-width: 768px) {
+  .program-card-title {
+    margin: 0 0 20px;
+    height: auto;
+  }
   .programs-content {
     grid-template-columns: 1fr;
   }
