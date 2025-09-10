@@ -893,6 +893,9 @@ section.contacts h2 {
 
 
 @media (max-width: 576px) {
+  #overlay {
+    background: url(../images/bg_overlay.jpg) center/350% no-repeat;
+  }
   .overlay-center {
     width: 100%;
     top: 57%;
