@@ -84,7 +84,7 @@ section h2 {
 }
 .banner {
   background: url('../images/bg_banner_2.jpg') center/cover no-repeat;
-  height: 85vh;
+  height: 80vh;
 }
 .banner-inner {
   width: 100%;
@@ -108,7 +108,7 @@ section h2 {
 }
 
 .logo-img {
-  width: 200px;
+  width: 250px;
 }
 .logo-img img {
   width: 100%;
@@ -130,7 +130,7 @@ section h2 {
   text-transform: uppercase;
   font-size: 24px;
   font-weight: 600;
-  margin-bottom: 40px;
+  margin-bottom: 80px;
 }
 .header-btns {
     display: flex;
@@ -352,6 +352,7 @@ a.header-btns-item:hover {
   }
   .subtitle {
     font-size: 18px;
+    margin-bottom: 40px;
   }
   section h2 {
     font-size: 28px;
@@ -590,27 +591,37 @@ section.programs {
 
 .pricing-section {
   padding: 40px 0;
+  background-color: var(--milk);
 }
 
 .pricing-title {
   text-align: center;
-  margin: 0 0 18px;
+  margin: 0 0 20px;
   font-size: 32px;
 }
 
 .pricing-grid {
-  display: grid;
-  gap: 16px;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  display: flex;
+  gap: 20px;
+  justify-content: center;
 }
 
 .pricing-card {
+  width: 33%;
   background: #fff;
   border-radius: 12px;
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.06);
   padding: 16px;
 }
+.pricing-card-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+.pricing-card-bottom {
 
+}
 .price-value {
   margin-top: 6px;
 }
@@ -623,7 +634,7 @@ section.programs {
 
 .pricing-cta {
   text-align: center;
-  margin-top: 20px;
+  margin-top: 40px;
 }
 
 .signup-button {
