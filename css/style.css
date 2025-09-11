@@ -534,6 +534,7 @@ section.programs {
   display: grid;
   gap: 24px;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  margin-bottom: 20px;
 }
 
 .program-card {
@@ -607,7 +608,7 @@ section.programs {
 }
 
 .pricing-card {
-  width: 33%;
+  width: 30%;
   background: #fff;
   border-radius: 12px;
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.06);
