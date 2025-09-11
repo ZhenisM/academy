@@ -397,14 +397,34 @@
     <span class="close">&times;</span>
     <h2>Записаться на курс</h2>
     <form id="course-form">
+      <label for="first_name">Фамилия:</label>
+      <input type="text" id="first_name" name="first_name" required>
+
       <label for="name">Имя:</label>
       <input type="text" id="name" name="name" required>
+
+      <label for="last_name">Отчество:</label>
+      <input type="text" id="last_name" name="last_name" required>
 
       <label for="phone">Телефон:</label>
       <input type="tel" id="phone" name="phone" required>
 
-      <label for="age">Возраст:</label>
-      <input type="number" id="age" name="age" required min="1">
+      <label for="birthdate">Дата рождения:</label>
+      <input type="date" id="birthdate" name="birthdate" required>
+
+      <fieldset>
+          <legend>Кто будет учиться:</legend>
+
+          <label>
+            <input type="radio" name="identity" value="child" required>
+            Ребёнок
+          </label>
+
+          <label>
+            <input type="radio" name="identity" value="woman">
+            Женщина
+          </label>
+       </fieldset>
 
       <button type="submit">Отправить</button>
     </form>
