@@ -892,11 +892,15 @@ section.contacts h2 {
   width: 100%;
 }
 
+.overlay-center-logo,
+.overlay-center-text,
+.overlay-center-arabic {
+  opacity: 0;
+  transform: translateX(-100px);
+  transition: transform 0.6s ease, opacity 0.6s ease;
+}
 
 @media (max-width: 576px) {
-  #overlay {
-    background: url(../images/bg_overlay.jpg) center/350% no-repeat;
-  }
   .overlay-center {
     width: 100%;
     top: 57%;

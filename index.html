@@ -12,7 +12,7 @@
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
 
-    <link rel="preload" as="image" href="../images/bg_overlay.jpg">
+    <link rel="preload" as="image" href="images/bg_overlay.jpg">
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
@@ -500,7 +500,7 @@
             }
         });
 
-
+        /*
         // Прокрутка вверх
         window.scrollTo(0, 0);
 
@@ -511,9 +511,55 @@
         setTimeout(function () {
             document.getElementById('overlay').style.display = 'none';
             document.body.style.overflow = 'auto';
-        }, 7000);
+        }, 7000);*/
 
     });
+
+    $(document).ready(function () {
+      // Прокрутка вверх и блокировка скролла
+      window.scrollTo(0, 0);
+      $('body').css('overflow', 'hidden');
+
+      // Скрываем блоки перед анимацией
+      $('.overlay-center-logo, .overlay-center-text, .overlay-center-arabic').css({
+        opacity: 0,
+        transform: 'translateX(-100px)'
+      });
+
+      // Анимация поочерёдного появления
+      $('.overlay-center-logo').delay(300).animate({ opacity: 1 }, {
+        duration: 600,
+        step: function (now, fx) {
+          $(this).css('transform', 'translateX(0)');
+        },
+        complete: function () {
+          $('.overlay-center-text').delay(300).animate({ opacity: 1 }, {
+            duration: 600,
+            step: function (now, fx) {
+              $(this).css('transform', 'translateX(0)');
+            },
+            complete: function () {
+              $('.overlay-center-arabic').delay(300).animate({ opacity: 1 }, {
+                duration: 600,
+                step: function (now, fx) {
+                  $(this).css('transform', 'translateX(0)');
+                },
+                complete: function () {
+                  // После появления всех блоков — таймер на скрытие
+                  setTimeout(function () {
+                    $('#overlay').fadeOut(500);
+                    $('body').css('overflow', 'auto');
+                  }, 4000);
+                }
+              });
+            }
+          });
+        }
+      });
+    });
+
+
+
 
     $(document).ready(function () {
         // Открытие модалки
