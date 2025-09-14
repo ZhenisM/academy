@@ -66,7 +66,7 @@
                     Начни читать Коран уже через 1 месяц
                 </div>
                 <div class="header-btns">
-                    <a href="" id="contact-form" class="contact-form header-btns-item wow fadeInUpBig" data-wow-delay=".8s">Записаться на курс</a>
+                    <a href="" id="contact-form" data-target="#modal" class="contact-form header-btns-item wow fadeInUpBig" data-wow-delay=".8s">Записаться на курс</a>
                 </div>
             </div>
         </div>
@@ -174,7 +174,7 @@
                             Атмосфера доброты и поддержки делает процесс лёгким и увлекательным.
                         </div>
                     </div>
-                    <div class="contact-form audience-info-btn">Записать ребенка</div>
+                    <div class="contact-form audience-info-btn" data-target="#modal_1">Записать ребенка</div>
                 </div>
                 <div class="audience-info-wrap">
                     <div class="audience-info">
@@ -189,7 +189,7 @@
                             Уроки проходят в дружеской и уважительной обстановке, помогая приблизиться к духовности.
                         </div>
                     </div>
-                    <div class="contact-form audience-info-btn">Записаться</div>
+                    <div class="contact-form audience-info-btn" data-target="#modal_2">Записаться</div>
                 </div>
             </div>
         </div>
@@ -229,7 +229,7 @@
                     <li>Через 1 месяц начнёте самостоятельно читать Коран.</li>
                 </ul>
             </div>
-            <a href="#signup" class="contact-form program-button">Записаться на пробный урок</a>
+            <a href="#signup" class="contact-form program-button" data-target="#modal_3">Записаться на пробный урок</a>
         </article>
         <article class="program-card">
             <div class="programs-info-block">
@@ -243,7 +243,7 @@
                     <li>Личные рекомендации по вашим ошибкам.</li>
                 </ul>
             </div>
-            <a href="#signup" class="contact-form program-button">Записаться на пробный урок</a>
+            <a href="#signup" class="contact-form program-button" data-target="#modal_4">Записаться на пробный урок</a>
         </article>
         <article class="program-card">
             <div class="programs-info-block">
@@ -257,7 +257,7 @@
                     <li>Практика на сурах, разбор ошибок.</li>
                 </ul>
             </div>
-            <a href="#signup" class="contact-form program-button">Записаться на пробный урок</a>
+            <a href="#signup" class="contact-form program-button" data-target="#modal_5">Записаться на пробный урок</a>
         </article>
     </div>
 
@@ -366,22 +366,22 @@
     <h2>Записаться на курс</h2>
     <form id="course-form">
       <label for="first_name">Фамилия:</label>
-      <input type="text" id="first_name" name="first_name" required>
+      <input type="text" class="first_name" name="first_name" required>
 
       <label for="name">Имя:</label>
-      <input type="text" id="name" name="name" required>
+      <input type="text" class="name" name="name" required>
 
       <label for="last_name">Отчество:</label>
-      <input type="text" id="last_name" name="last_name" required>
+      <input type="text" class="last_name" name="last_name" required>
 
       <label for="phone">Телефон:</label>
-      <input type="tel" id="phone" class="phone" name="phone" placeholder="+7 (___) ___-__-__" required>
+      <input type="tel" class="phone" class="phone" name="phone" placeholder="+7 (___) ___-__-__" required>
 
       <label for="birthdate">Дата рождения:</label>
-      <input type="date" id="birthdate" name="birthdate" required>
+      <input type="date" class="birthdate" name="birthdate" required>
 
-        <label for="identity">Дата рождения:</label>
-        <select id="identity" name="identity" required>
+        <label for="identity">Для кого курс:</label>
+        <select class="identity" name="identity" required>
             <option value="" disabled selected>Выберите из списка:</option>
             <option value="child">Ребёнок</option>
             <option value="woman">Женщина</option>
@@ -393,7 +393,162 @@
   </div>
 </div>
 
+<div id="modal_1" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h2>Записаться на курс</h2>
+    <form id="course-form">
+        <label for="first_name">Фамилия:</label>
+        <input type="text" class="first_name" name="first_name" required>
 
+        <label for="name">Имя:</label>
+        <input type="text" class="name" name="name" required>
+
+        <label for="last_name">Отчество:</label>
+        <input type="text" class="last_name" name="last_name" required>
+
+        <label for="phone">Телефон:</label>
+        <input type="tel" class="phone" class="phone" name="phone" placeholder="+7 (___) ___-__-__" required>
+
+        <label for="birthdate">Дата рождения:</label>
+        <input type="date" class="birthdate" name="birthdate" required>
+
+        <label for="identity">Для кого курс:</label>
+        <input type="text" class="identity" name="identity" value="Ребёнок" readonly>
+
+
+      <button type="submit">Отправить</button>
+    </form>
+  </div>
+</div>
+
+<div id="modal_2" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h2>Записаться на курс</h2>
+    <form id="course-form">
+        <label for="first_name">Фамилия:</label>
+        <input type="text" class="first_name" name="first_name" required>
+
+        <label for="name">Имя:</label>
+        <input type="text" class="name" name="name" required>
+
+        <label for="last_name">Отчество:</label>
+        <input type="text" class="last_name" name="last_name" required>
+
+        <label for="phone">Телефон:</label>
+        <input type="tel" class="phone" class="phone" name="phone" placeholder="+7 (___) ___-__-__" required>
+
+        <label for="birthdate">Дата рождения:</label>
+        <input type="date" class="birthdate" name="birthdate" required>
+
+        <label for="identity">Для кого курс:</label>
+        <input type="text" class="identity" name="identity" value="Женщина" readonly>
+
+
+      <button type="submit">Отправить</button>
+    </form>
+  </div>
+</div>
+
+<div id="modal_3" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h2>Для начинающих по авторской методике</h2>
+    <form id="course-form">
+      <label for="first_name">Фамилия:</label>
+      <input type="text" class="first_name" name="first_name" required>
+
+      <label for="name">Имя:</label>
+      <input type="text" class="name" name="name" required>
+
+      <label for="last_name">Отчество:</label>
+      <input type="text" class="last_name" name="last_name" required>
+
+      <label for="phone">Телефон:</label>
+      <input type="tel" class="phone" class="phone" name="phone" placeholder="+7 (___) ___-__-__" required>
+
+      <label for="birthdate">Дата рождения:</label>
+      <input type="date" class="birthdate" name="birthdate" required>
+
+        <label for="identity">Для кого курс:</label>
+        <select class="identity" name="identity" required>
+            <option value="" disabled selected>Выберите из списка:</option>
+            <option value="child">Ребёнок</option>
+            <option value="woman">Женщина</option>
+        </select>
+
+
+      <button type="submit">Отправить</button>
+    </form>
+  </div>
+</div>
+
+<div id="modal_4" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h2>Для продолжающих</h2>
+    <form id="course-form">
+      <label for="first_name">Фамилия:</label>
+      <input type="text" class="first_name" name="first_name" required>
+
+      <label for="name">Имя:</label>
+      <input type="text" class="name" name="name" required>
+
+      <label for="last_name">Отчество:</label>
+      <input type="text" class="last_name" name="last_name" required>
+
+      <label for="phone">Телефон:</label>
+      <input type="tel" class="phone" class="phone" name="phone" placeholder="+7 (___) ___-__-__" required>
+
+      <label for="birthdate">Дата рождения:</label>
+      <input type="date" class="birthdate" name="birthdate" required>
+
+        <label for="identity">Для кого курс:</label>
+        <select class="identity" name="identity" required>
+            <option value="" disabled selected>Выберите из списка:</option>
+            <option value="child">Ребёнок</option>
+            <option value="woman">Женщина</option>
+        </select>
+
+
+      <button type="submit">Отправить</button>
+    </form>
+  </div>
+</div>
+
+<div id="modal_5" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h2>Записаться на курс "Таджвид"</h2>
+    <form id="course-form">
+      <label for="first_name">Фамилия:</label>
+      <input type="text" class="first_name" name="first_name" required>
+
+      <label for="name">Имя:</label>
+      <input type="text" class="name" name="name" required>
+
+      <label for="last_name">Отчество:</label>
+      <input type="text" class="last_name" name="last_name" required>
+
+      <label for="phone">Телефон:</label>
+      <input type="tel" class="phone" class="phone" name="phone" placeholder="+7 (___) ___-__-__" required>
+
+      <label for="birthdate">Дата рождения:</label>
+      <input type="date" class="birthdate" name="birthdate" required>
+
+        <label for="identity">Для кого курс:</label>
+        <select class="identity" name="identity" required>
+            <option value="" disabled selected>Выберите из списка:</option>
+            <option value="child">Ребёнок</option>
+            <option value="woman">Женщина</option>
+        </select>
+
+
+      <button type="submit">Отправить</button>
+    </form>
+  </div>
+</div>
 
 <script>
 
@@ -517,32 +672,37 @@
 
 
     $(document).ready(function () {
-        // Открытие модалки
+        // Открытие нужной модалки по data-target
         $('.contact-form').on('click', function (e) {
             e.preventDefault();
-            $('#modal').fadeIn();
+            const targetModal = $(this).data('target');
+            $(targetModal).fadeIn();
         });
 
-        // Закрытие по кнопке
-        $('.close').on('click', function () {
-            $('#modal').fadeOut();
+        // Закрытие по кнопке .close
+        $('.modal .close').on('click', function () {
+            $(this).closest('.modal').fadeOut();
         });
 
         // Закрытие при клике вне модального окна
         $(window).on('click', function (e) {
-            if ($(e.target).is('#modal')) {
-                $('#modal').fadeOut();
-            }
+            $('.modal').each(function () {
+                if ($(e.target).is(this)) {
+                    $(this).fadeOut();
+                }
+            });
         });
 
-        // Обработка формы
-        $('#course-form').on('submit', function (e) {
+        // Обработка всех форм с классом .course-form
+        $(document).on('submit', '.course-form', function (e) {
             e.preventDefault();
             alert('Форма отправлена!');
-            $('#modal').fadeOut();
-            $(this)[0].reset(); // сброс формы
+            const modal = $(this).closest('.modal');
+            modal.fadeOut();
+            this.reset();
         });
     });
+
 
   $(document).ready(function () {
     $('.phone').inputmask({
